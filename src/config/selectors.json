@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "2025-07-14T00:00:00Z",
+  "platforms": {
+    "linkedin": {
+      "feedPost": "[data-urn*='activity'], .feed-shared-update-v2, .occludable-update, div[data-id], .scaffold-finite-scroll__content > div > div",
+      "authorName": ".update-components-actor__name span[aria-hidden='true'], .feed-shared-actor__name span, span.feed-shared-actor__name, a[data-tracking-control-name*='actor'] span[aria-hidden='true']",
+      "postText": ".feed-shared-update-v2__description span[dir='ltr'], .feed-shared-inline-show-more-text span[dir='ltr'], .break-words span[dir='ltr'], span.break-words",
+      "engagementLikes": ".social-details-social-counts__reactions-count, button[aria-label*='reaction'] span, span.social-details-social-counts__reactions-count",
+      "engagementComments": "button[aria-label*='comment'] span, .social-details-social-counts__comments",
+      "engagementReposts": "button[aria-label*='repost'] span, .social-details-social-counts__reposts",
+      "timestamp": "time[datetime], .update-components-actor__sub-description time, span.update-components-actor__sub-description span[aria-hidden='true']",
+      "commentContainer": ".comments-comments-list .comments-comment-item, .comments-comment-entity, article[data-urn*='comment']",
+      "commentAuthor": ".comments-post-meta__name-text span[aria-hidden='true'], .comments-comment-item__author-name span",
+      "commentText": ".comments-comment-item__main-content span[dir='ltr'], .comments-comment-texteditor span",
+      "commentLikes": ".comments-comment-social-bar__reactions-count, button[aria-label*='like'] span",
+      "authorFollowers": ".update-components-actor__description span[aria-hidden='true'], .feed-shared-actor__description span"
+    },
+    "x-twitter": {
+      "feedPost": "article[data-testid='tweet'], [data-testid='tweet']",
+      "authorName": "[data-testid='User-Name'] span:not([class*='css-']):first-child, [data-testid='User-Name'] a[role='link'] span",
+      "authorHandle": "[data-testid='User-Name'] a[tabindex='-1'] span, [data-testid='User-Name'] div[dir='ltr'] span",
+      "postText": "[data-testid='tweetText'], [data-testid='tweetText'] span",
+      "engagementLikes": "[data-testid='like'] span[data-testid='app-text-transition-container'], [data-testid='like'] span",
+      "engagementComments": "[data-testid='reply'] span[data-testid='app-text-transition-container'], [data-testid='reply'] span",
+      "engagementReposts": "[data-testid='retweet'] span[data-testid='app-text-transition-container'], [data-testid='retweet'] span",
+      "engagementViews": "a[href$='/analytics'] span, [data-testid='app-text-transition-container']",
+      "timestamp": "time[datetime]"
+    },
+    "youtube": {
+      "feedPost": "#contents ytd-comment-thread-renderer, ytd-comment-renderer",
+      "authorName": "#author-text span, #channel-name yt-formatted-string",
+      "postText": "#content-text, #description yt-formatted-string, ytd-text-inline-expander > span",
+      "engagementLikes": "#vote-count-middle",
+      "engagementComments": "#count .count-text span",
+      "timestamp": "#published-time-text a, #info-strings yt-formatted-string",
+      "commentContainer": "#contents ytd-comment-thread-renderer",
+      "commentAuthor": "#author-text span",
+      "commentText": "#content-text",
+      "commentLikes": "#vote-count-middle"
+    },
+    "substack": {
+      "feedPost": "[role='article'][aria-label='Note'], [role='article'][aria-label='Post'], .feedItem-ONDKv3, .post-preview, article.post",
+      "authorName": "span.weight-medium-fw81nC a.link-LIBpto, .post-header .byline a, .author-name",
+      "postText": ".ProseMirror.FeedProseMirror, .feedCommentBodyInner-AOzMIC, .body.markup, .post-content, .available-content",
+      "engagementLikes": "button[aria-label='Like'] div.line-height-20-t4M0El, .like-button-container .label",
+      "engagementComments": "button[aria-label='Comment'] div.line-height-20-t4M0El, .post-ufi-comment-button .label",
+      "engagementReposts": "button[aria-label='Restack'] div.line-height-20-t4M0El, .post-ufi-button[aria-label*='restack'] .label",
+      "timestamp": "a.link-LIBpto[title], time, .post-date",
+      "commentContainer": ".comment-list-item, .comment, div[class*='comment-item']",
+      "commentAuthor": ".comment-meta .commenter-name, .comment-author-name, .profile-hover-card-target span",
+      "commentText": ".comment-body .body, .comment-content",
+      "commentLikes": ".comment-like-button .label, .like-button .label",
+      "subscriberCount": ".pencraft.pc-display-flex .pub-stats span, .subscriber-count",
+      "noteContent": ".ProseMirror.FeedProseMirror, .feedCommentBodyInner-AOzMIC, .note-content, .feed-note .body",
+      "noteAuthor": "span.weight-medium-fw81nC a.link-LIBpto, .note-header .profile-hover-card-target span",
+      "noteLikes": "button[aria-label='Like'] div.line-height-20-t4M0El, .note-like-button .label"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "Social Media Manager Helper",
+  "version": "0.1.0",
+  "description": "AI-powered engagement assistant for LinkedIn and X",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "alarms",
+    "notifications",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.linkedin.com/*",
+    "*://*.x.com/*",
+    "*://*.twitter.com/*",
+    "*://*.youtube.com/*",
+    "*://*.substack.com/*",
+    "*://substack.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "src/sidepanel/index.html"
+  },
+  "action": {
+    "default_title": "Open Social Media Manager"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["src/content-scripts/platforms/linkedin.ts"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.x.com/*", "*://*.twitter.com/*"],
+      "js": ["src/content-scripts/platforms/x-twitter.ts"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["src/content-scripts/platforms/youtube.ts"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.substack.com/*", "*://substack.com/*"],
+      "js": ["src/content-scripts/platforms/substack.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  }
+}
